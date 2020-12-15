@@ -76,31 +76,39 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Pizza_adatok.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Pizza_nev.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rendelesek.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Rendeles_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_DBDataSet.cs">
+      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rendeles_model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rendeles_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rendeles_model.edmx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -114,13 +122,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,28 +132,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="Rendeles_model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Rendeles_model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Rendeles_DBDataSet.xsc">
+      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rendeles_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rendeles_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rendeles_DBDataSet.xss">
+      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rendeles_model.edmx.diagram">
+      <DependentUpon>Rendeles_model.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="README.txt" />
     <Content Include="Rendeles_DB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Rendeles_DB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Rendeles_DB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Rendeles_model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Rendeles_model.edmx</DependentUpon>
+      <LastGenOutput>Rendeles_model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Rendeles_model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Rendeles_model.edmx</DependentUpon>
+      <LastGenOutput>Rendeles_model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

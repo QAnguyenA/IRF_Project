@@ -105,7 +105,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Rendeles_DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Rendeles_DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Pizza_adatok" EntityType="Self.Pizza_adatok" />
           <EntitySet Name="Pizza_nev" EntityType="Self.Pizza_nev" />
           <EntitySet Name="Rendeleseks" EntityType="Self.Rendelesek" />
@@ -119,7 +119,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Rendeles_DBModelStoreContainer" CdmEntityContainer="Rendeles_DBEntities">
+        <EntityContainerMapping StorageEntityContainer="Rendeles_DBModelStoreContainer" CdmEntityContainer="Rendeles_DBEntities1">
           <EntitySetMapping Name="Pizza_adatok">
             <EntityTypeMapping TypeName="Rendeles_DBModel.Pizza_adatok">
               <MappingFragment StoreEntitySet="Pizza_adatok">

@@ -13,10 +13,10 @@ namespace IRF_Beadando_bmt3q9
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Rendeles_DBEntities : DbContext
+    public partial class Rendeles_DBEntities1 : DbContext
     {
-        public Rendeles_DBEntities()
-            : base("name=Rendeles_DBEntities")
+        public Rendeles_DBEntities1()
+            : base("name=Rendeles_DBEntities1")
         {
         }
     
