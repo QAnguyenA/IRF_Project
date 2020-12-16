@@ -30,10 +30,17 @@ namespace IRF_Beadando_bmt3q9
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hawaiiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pepperonisPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.névDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telfonszámDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -41,7 +48,7 @@ namespace IRF_Beadando_bmt3q9
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.KosarbaBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,19 +57,12 @@ namespace IRF_Beadando_bmt3q9
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hawaiiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pepperonisPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.névDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telfonszámDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UjraBtn = new System.Windows.Forms.Button();
+            this.RendelésBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -84,19 +84,65 @@ namespace IRF_Beadando_bmt3q9
             this.dataGridView1.Size = new System.Drawing.Size(656, 199);
             this.dataGridView1.TabIndex = 0;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hawaiiPizzaDataGridViewTextBoxColumn
+            // 
+            this.hawaiiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Hawaii_Pizza";
+            this.hawaiiPizzaDataGridViewTextBoxColumn.HeaderText = "Hawaii_Pizza";
+            this.hawaiiPizzaDataGridViewTextBoxColumn.Name = "hawaiiPizzaDataGridViewTextBoxColumn";
+            this.hawaiiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pepperonisPizzaDataGridViewTextBoxColumn
+            // 
+            this.pepperonisPizzaDataGridViewTextBoxColumn.DataPropertyName = "Pepperonis_Pizza";
+            this.pepperonisPizzaDataGridViewTextBoxColumn.HeaderText = "Pepperonis_Pizza";
+            this.pepperonisPizzaDataGridViewTextBoxColumn.Name = "pepperonisPizzaDataGridViewTextBoxColumn";
+            this.pepperonisPizzaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tengerGyumolcseiPizzaDataGridViewTextBoxColumn
+            // 
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Tenger_Gyumolcsei_Pizza";
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.HeaderText = "Tenger_Gyumolcsei_Pizza";
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.Name = "tengerGyumolcseiPizzaDataGridViewTextBoxColumn";
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // névDataGridViewTextBoxColumn
+            // 
+            this.névDataGridViewTextBoxColumn.DataPropertyName = "Név";
+            this.névDataGridViewTextBoxColumn.HeaderText = "Név";
+            this.névDataGridViewTextBoxColumn.Name = "névDataGridViewTextBoxColumn";
+            this.névDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telfonszámDataGridViewTextBoxColumn
+            // 
+            this.telfonszámDataGridViewTextBoxColumn.DataPropertyName = "Telfonszám";
+            this.telfonszámDataGridViewTextBoxColumn.HeaderText = "Telfonszám";
+            this.telfonszámDataGridViewTextBoxColumn.Name = "telfonszámDataGridViewTextBoxColumn";
+            this.telfonszámDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rendelesekBindingSource
+            // 
+            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
+            // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(702, 205);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(261, 217);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
@@ -145,15 +191,15 @@ namespace IRF_Beadando_bmt3q9
             this.textBox5.Size = new System.Drawing.Size(104, 20);
             this.textBox5.TabIndex = 9;
             // 
-            // button1
+            // KosarbaBtn
             // 
-            this.button1.Location = new System.Drawing.Point(598, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kosárba";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.KosarbaBtn.Location = new System.Drawing.Point(598, 399);
+            this.KosarbaBtn.Name = "KosarbaBtn";
+            this.KosarbaBtn.Size = new System.Drawing.Size(98, 23);
+            this.KosarbaBtn.TabIndex = 10;
+            this.KosarbaBtn.Text = "Kosárba";
+            this.KosarbaBtn.UseVisualStyleBackColor = true;
+            this.KosarbaBtn.Click += new System.EventHandler(this.KosarbaBtn_Click);
             // 
             // label1
             // 
@@ -225,79 +271,33 @@ namespace IRF_Beadando_bmt3q9
             this.panel1.Size = new System.Drawing.Size(171, 170);
             this.panel1.TabIndex = 18;
             // 
-            // button2
+            // UjraBtn
             // 
-            this.button2.Location = new System.Drawing.Point(888, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 75);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Újra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.UjraBtn.Location = new System.Drawing.Point(888, 29);
+            this.UjraBtn.Name = "UjraBtn";
+            this.UjraBtn.Size = new System.Drawing.Size(75, 75);
+            this.UjraBtn.TabIndex = 19;
+            this.UjraBtn.Text = "Újra";
+            this.UjraBtn.UseVisualStyleBackColor = true;
+            this.UjraBtn.Click += new System.EventHandler(this.UjraBtn_Click);
             // 
-            // button3
+            // RendelésBtn
             // 
-            this.button3.Location = new System.Drawing.Point(888, 124);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 75);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Rendelés";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hawaiiPizzaDataGridViewTextBoxColumn
-            // 
-            this.hawaiiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Hawaii_Pizza";
-            this.hawaiiPizzaDataGridViewTextBoxColumn.HeaderText = "Hawaii_Pizza";
-            this.hawaiiPizzaDataGridViewTextBoxColumn.Name = "hawaiiPizzaDataGridViewTextBoxColumn";
-            this.hawaiiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pepperonisPizzaDataGridViewTextBoxColumn
-            // 
-            this.pepperonisPizzaDataGridViewTextBoxColumn.DataPropertyName = "Pepperonis_Pizza";
-            this.pepperonisPizzaDataGridViewTextBoxColumn.HeaderText = "Pepperonis_Pizza";
-            this.pepperonisPizzaDataGridViewTextBoxColumn.Name = "pepperonisPizzaDataGridViewTextBoxColumn";
-            this.pepperonisPizzaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tengerGyumolcseiPizzaDataGridViewTextBoxColumn
-            // 
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Tenger_Gyumolcsei_Pizza";
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.HeaderText = "Tenger_Gyumolcsei_Pizza";
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.Name = "tengerGyumolcseiPizzaDataGridViewTextBoxColumn";
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // névDataGridViewTextBoxColumn
-            // 
-            this.névDataGridViewTextBoxColumn.DataPropertyName = "Név";
-            this.névDataGridViewTextBoxColumn.HeaderText = "Név";
-            this.névDataGridViewTextBoxColumn.Name = "névDataGridViewTextBoxColumn";
-            this.névDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telfonszámDataGridViewTextBoxColumn
-            // 
-            this.telfonszámDataGridViewTextBoxColumn.DataPropertyName = "Telfonszám";
-            this.telfonszámDataGridViewTextBoxColumn.HeaderText = "Telfonszám";
-            this.telfonszámDataGridViewTextBoxColumn.Name = "telfonszámDataGridViewTextBoxColumn";
-            this.telfonszámDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rendelesekBindingSource
-            // 
-            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
+            this.RendelésBtn.Location = new System.Drawing.Point(888, 124);
+            this.RendelésBtn.Name = "RendelésBtn";
+            this.RendelésBtn.Size = new System.Drawing.Size(75, 75);
+            this.RendelésBtn.TabIndex = 20;
+            this.RendelésBtn.Text = "Rendelés";
+            this.RendelésBtn.UseVisualStyleBackColor = true;
+            this.RendelésBtn.Click += new System.EventHandler(this.RendelesBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.RendelésBtn);
+            this.Controls.Add(this.UjraBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -306,7 +306,7 @@ namespace IRF_Beadando_bmt3q9
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.KosarbaBtn);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -318,9 +318,9 @@ namespace IRF_Beadando_bmt3q9
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +336,7 @@ namespace IRF_Beadando_bmt3q9
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button KosarbaBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -345,8 +345,8 @@ namespace IRF_Beadando_bmt3q9
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button UjraBtn;
+        private System.Windows.Forms.Button RendelésBtn;
         private System.Windows.Forms.BindingSource rendelesekBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hawaiiPizzaDataGridViewTextBoxColumn;

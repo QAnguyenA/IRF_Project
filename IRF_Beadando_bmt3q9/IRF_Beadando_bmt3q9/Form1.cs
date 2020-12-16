@@ -38,14 +38,14 @@ namespace IRF_Beadando_bmt3q9
             {
                 for (int col = 0; col < 7; col++)
                 {
-                    PizzaKocka sf = new PizzaKocka();
-                    sf.Left = col * sf.Width;
-                    sf.Top = row * sf.Height;
+                    PizzaKocka pk = new PizzaKocka();
+                    pk.Left = col * pk.Width;
+                    pk.Top = row * pk.Height;
                     if((col % 2 & row % 2)==0)
                     {
-                        sf.BackColor = Color.Yellow;
+                        pk.BackColor = Color.Yellow;
                     }
-                    panel1.Controls.Add(sf);
+                    panel1.Controls.Add(pk);
                 }
             }
         }
@@ -65,7 +65,7 @@ namespace IRF_Beadando_bmt3q9
 
     
 
-        private void button1_Click(object sender, EventArgs e)
+        private void KosarbaBtn_Click(object sender, EventArgs e)
         {
             
             try
@@ -89,7 +89,7 @@ namespace IRF_Beadando_bmt3q9
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void UjraBtn_Click(object sender, EventArgs e)
         {
             
             panel1.Controls.Clear();
@@ -98,7 +98,7 @@ namespace IRF_Beadando_bmt3q9
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void RendelesBtn_Click(object sender, EventArgs e)
         {
             Megveszem m = new Megveszem();
             if(m.ShowDialog()==DialogResult.OK)
