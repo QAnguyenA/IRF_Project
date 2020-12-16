@@ -71,12 +71,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Absztrakt_osztaly\IRendManager.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kontroller\RendelesKontroller.cs" />
     <Compile Include="Pizza_adatok.cs">
       <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
@@ -88,6 +90,7 @@
     <Compile Include="Rendelesek.cs">
       <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Rendeles_manager\RendManager.cs" />
     <Compile Include="Rendeles_model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +106,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Rendeles_model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Sajat_rendeles\Sajat.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,5 +178,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
