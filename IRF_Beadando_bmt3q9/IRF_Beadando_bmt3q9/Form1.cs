@@ -34,13 +34,17 @@ namespace IRF_Beadando_bmt3q9
         private void PizzaKep()
         {
             
-            for (int row = 0; row < 8; row++)
+            for (int row = 0; row < 7; row++)
             {
-                for (int col = 0; col < 8; col++)
+                for (int col = 0; col < 7; col++)
                 {
                     PizzaKocka sf = new PizzaKocka();
                     sf.Left = col * sf.Width;
                     sf.Top = row * sf.Height;
+                    if((col % 2 & row % 2)==0)
+                    {
+                        sf.BackColor = Color.Yellow;
+                    }
                     panel1.Controls.Add(sf);
                 }
             }
@@ -87,8 +91,13 @@ namespace IRF_Beadando_bmt3q9
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             panel1.Controls.Clear();
             PizzaKep();
+            
+            
         }
+
+      
     }
 }

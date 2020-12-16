@@ -1,7 +1,7 @@
 A feladatban egy képzeletbeli pizzaszállítócég rendelési listájának felületét készítem el, ahol a vevő 3 pizza közül választhat és láthatja a
-diagrammon az egyes pizzák tápértékét.
+diagrammon az egyes pizzákból mennyit vett és hány ember várokizik elötte . Először a saját kosarába teszi a termékeket és ha kilép, akkor a rendelése elveszik.
 
 Funkciók: 	- rendeléshozzáadás
-			- diagramkészítés
-			- rendelésvalidálás (Unit-teszt)
-			- valami grafikus ábrázolás ( térkép vagy pizza) 
+			- diagrammon pizzák megoszlása
+			- rendelésvalidálás (Unit-teszt: Név, Telefonszám)
+			- unaloműző játék(pizza eltűnik.) 
