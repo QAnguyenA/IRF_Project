@@ -127,6 +127,9 @@
       <DependentUpon>Rendeles_model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Sajat_rendeles\Sajat.cs" />
+    <Compile Include="UI_kocka\PizzaKocka.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

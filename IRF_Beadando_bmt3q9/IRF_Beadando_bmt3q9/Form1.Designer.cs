@@ -54,8 +54,11 @@ namespace IRF_Beadando_bmt3q9
             this.Tenger_Gyumolcsei_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Név = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telfonszám = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -248,6 +251,23 @@ namespace IRF_Beadando_bmt3q9
             this.Telfonszám.Name = "Telfonszám";
             this.Telfonszám.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(702, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(171, 170);
+            this.panel1.TabIndex = 18;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(888, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 75);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Újra";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -259,11 +279,23 @@ namespace IRF_Beadando_bmt3q9
             // 
             this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(888, 123);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "label8";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -316,6 +348,9 @@ namespace IRF_Beadando_bmt3q9
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenger_Gyumolcsei_Pizza;
         private System.Windows.Forms.DataGridViewTextBoxColumn Név;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telfonszám;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
     }
 }
 

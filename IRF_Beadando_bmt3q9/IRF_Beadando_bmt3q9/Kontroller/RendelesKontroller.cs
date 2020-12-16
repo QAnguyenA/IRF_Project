@@ -45,7 +45,7 @@ namespace IRF_Beadando_bmt3q9.Kontroller
 
         public bool Validatenev(string nev)
         {
-            return Regex.IsMatch(nev,@"[a-zA-Z]");
+            return Regex.IsMatch(nev,@"^[a-zA-Z]*$");
         }
 
         public bool ValidateTelefon(string telefonszam)

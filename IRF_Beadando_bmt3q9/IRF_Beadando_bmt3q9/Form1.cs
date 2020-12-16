@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using IRF_Beadando_bmt3q9.Kontroller;
+using IRF_Beadando_bmt3q9.UI_kocka;
 
 namespace IRF_Beadando_bmt3q9
 {
@@ -24,12 +25,25 @@ namespace IRF_Beadando_bmt3q9
             context.Rendeleseks.Load();
             rendelesekBindingSource.DataSource = context.Rendeleseks.Local;
             dataGridView2.DataSource = _controller.RendManager.Sajats;
+            PizzaKep();
            
-            
-           
-
           
 
+        }
+
+        private void PizzaKep()
+        {
+            
+            for (int row = 0; row < 8; row++)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    PizzaKocka sf = new PizzaKocka();
+                    sf.Left = col * sf.Width;
+                    sf.Top = row * sf.Height;
+                    panel1.Controls.Add(sf);
+                }
+            }
         }
 
    
@@ -45,27 +59,14 @@ namespace IRF_Beadando_bmt3q9
 
         }
 
-   
-
     
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             try
             {
+                
                 _controller.Register(
                         int.Parse(textBox1.Text),
                         int.Parse(textBox2.Text),
@@ -73,6 +74,7 @@ namespace IRF_Beadando_bmt3q9
                         textBox4.Text,
                         textBox5.Text
                     );
+                Diagram();
             }
             catch (Exception ex)
             {
@@ -80,9 +82,13 @@ namespace IRF_Beadando_bmt3q9
                 MessageBox.Show(ex.Message);
             }
             
-            Diagram();
+
         }
 
-     
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            PizzaKep();
+        }
     }
 }
