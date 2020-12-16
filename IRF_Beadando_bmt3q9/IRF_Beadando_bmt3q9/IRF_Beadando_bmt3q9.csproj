@@ -99,6 +99,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Kontroller\RendelesKontroller.cs" />
+    <Compile Include="Megveszem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Megveszem.Designer.cs">
+      <DependentUpon>Megveszem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pizza_adatok.cs">
       <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Megveszem.resx">
+      <DependentUpon>Megveszem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

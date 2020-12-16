@@ -5,3 +5,6 @@ Funkciók: 	- rendeléshozzáadás
 			- diagrammon pizzák megoszlása
 			- rendelésvalidálás (Unit-teszt: Név, Telefonszám)
 			- unaloműző játék(pizza eltűnik.) 
+
+Végül, ha a vásárló eldöntötte, hogy mennyi pizzát akar venni a Rendelés fülön tud külön ablakban a kosárba helyezés alapján rendelni. 
+A rendelés bekerül az adatbázis végére az adatok kitöltése után.

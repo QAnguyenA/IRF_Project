@@ -27,7 +27,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Hawaii Pizza" Type="int" Nullable="false" />
           <Property Name="Pepperonis Pizza" Type="int" Nullable="false" />
           <Property Name="Tenger Gyumolcsei Pizza" Type="int" Nullable="false" />
@@ -104,7 +104,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Hawaii_Pizza" Type="Int32" Nullable="false" />
           <Property Name="Pepperonis_Pizza" Type="Int32" Nullable="false" />
           <Property Name="Tenger_Gyumolcsei_Pizza" Type="Int32" Nullable="false" />

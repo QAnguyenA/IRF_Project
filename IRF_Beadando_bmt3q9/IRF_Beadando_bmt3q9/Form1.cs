@@ -98,6 +98,21 @@ namespace IRF_Beadando_bmt3q9
             
         }
 
-      
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Megveszem m = new Megveszem();
+            if(m.ShowDialog()==DialogResult.OK)
+            {
+                Rendelesek Rendeles = new Rendelesek();
+                Rendeles.Hawaii_Pizza = int.Parse(m.Hawaii.Text);
+                Rendeles.Pepperonis_Pizza = int.Parse(m.Pepporonis.Text);
+                Rendeles.Tenger_Gyumolcsei_Pizza = int.Parse(m.Tgyumolcsei.Text);
+                Rendeles.Név = m.textBox2.Text;
+                Rendeles.Telfonszám = m.textBox3.Text;
+
+                rendelesekBindingSource.Add(Rendeles);
+                context.SaveChanges();
+            }
+        }
     }
 }
