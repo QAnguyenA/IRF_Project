@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using IRF_Beadando_bmt3q9.Absztrakt_osztaly;
 using IRF_Beadando_bmt3q9.Rendeles_manager;
@@ -27,6 +28,7 @@ namespace IRF_Beadando_bmt3q9.Kontroller
             if (!ValidateTelefon(telefonszam))
                 throw new ValidationException(
                     "A megadott telefonszám nem megfelelő!");
+     
             var sajat = new Sajat()
             {
                 hawaii_szama=h_szama,
@@ -43,13 +45,15 @@ namespace IRF_Beadando_bmt3q9.Kontroller
 
         public bool Validatenev(string nev)
         {
-            return true;
+            return Regex.IsMatch(nev,@" [A-ZíöőüűéáóÍÖŐÜŰÉÁÓúÚ]");
         }
 
         public bool ValidateTelefon(string telefonszam)
         {
-            return true;
+            return Regex.IsMatch(telefonszam,@"[0-9]{11}");
         }
-        
+
+   
+
     }
 }
