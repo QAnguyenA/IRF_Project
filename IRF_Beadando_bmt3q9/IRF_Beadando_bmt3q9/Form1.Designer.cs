@@ -52,13 +52,13 @@ namespace IRF_Beadando_bmt3q9
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hawaiiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pepperonisPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.névDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telfonszámDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -67,6 +67,7 @@ namespace IRF_Beadando_bmt3q9
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -102,6 +103,7 @@ namespace IRF_Beadando_bmt3q9
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(13, 265);
             this.dataGridView2.Name = "dataGridView2";
@@ -243,10 +245,6 @@ namespace IRF_Beadando_bmt3q9
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // rendelesekBindingSource
-            // 
-            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -288,6 +286,10 @@ namespace IRF_Beadando_bmt3q9
             this.telfonszámDataGridViewTextBoxColumn.HeaderText = "Telfonszám";
             this.telfonszámDataGridViewTextBoxColumn.Name = "telfonszámDataGridViewTextBoxColumn";
             this.telfonszámDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rendelesekBindingSource
+            // 
+            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
             // 
             // Form1
             // 
