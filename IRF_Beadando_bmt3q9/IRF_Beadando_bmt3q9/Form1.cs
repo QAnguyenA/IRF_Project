@@ -9,40 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using IRF_Beadando_bmt3q9.Kontroller;
 
 namespace IRF_Beadando_bmt3q9
 {
 
     public partial class Form1 : Form
     {
+        private RendelesKontroller _controller = new RendelesKontroller();
         Rendeles_DBEntities1 context = new Rendeles_DBEntities1();
         public Form1()
         {
             InitializeComponent();
             context.Rendeleseks.Load();
             rendelesekBindingSource.DataSource = context.Rendeleseks.Local;
-            Pizzalista();
+            dataGridView2.DataSource = _controller.RendManager.Sajats;
+           
             Diagram();
            
 
-            listBox1.ValueMember = "Id";
-            listBox1.DisplayMember = "Nev";
+           
 
 
         }
 
-        private void Pizzalista()
-        {
-            var lista = from x in context.Pizza_nev
-                        select x;
-
-            listBox1.DataSource = lista.ToList();
-        }
+   
 
         private void Diagram()
         {
-            chart1.DataSource = pizzaadatokBindingSource.DataSource;
-
+            
       
         }
 
@@ -55,14 +50,32 @@ namespace IRF_Beadando_bmt3q9
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void chart1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _controller.Register(
+                        int.Parse(textBox1.Text),
+                        int.Parse(textBox2.Text),
+                        int.Parse(textBox3.Text),
+                        textBox4.Text,
+                        textBox5.Text
+                    );
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+     
     }
 }
