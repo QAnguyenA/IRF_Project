@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,12 @@ namespace IRF_Beadando_bmt3q9.Kontroller
 
         public Sajat Register(int h_szama, int p_szama, int t_szama, string nev, string telefonszam)
         {
+            if (!Validatenev(nev))
+                throw new ValidationException(
+                    "A megadott név nem megfelelő!");
+            if (!ValidateTelefon(telefonszam))
+                throw new ValidationException(
+                    "A megadott telefonszám nem megfelelő!");
             var sajat = new Sajat()
             {
                 hawaii_szama=h_szama,
@@ -33,5 +40,16 @@ namespace IRF_Beadando_bmt3q9.Kontroller
             var ujrendeles = RendManager.CreateSajat(sajat);
             return ujrendeles;
         }
+
+        public bool Validatenev(string nev)
+        {
+            return true;
+        }
+
+        public bool ValidateTelefon(string telefonszam)
+        {
+            return true;
+        }
+        
     }
 }
