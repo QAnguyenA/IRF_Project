@@ -20,8 +20,20 @@ namespace IRF_Beadando_bmt3q9
             InitializeComponent();
             context.Rendeleseks.Load();
             rendelesekBindingSource.DataSource = context.Rendeleseks.Local;
+            Pizzalista();
+
+            listBox1.ValueMember = "Id";
+            listBox1.DisplayMember = "Nev";
             
             
+        }
+
+        private void Pizzalista()
+        {
+            var lista = from x in context.Pizza_nev
+                        select x;
+
+            listBox1.DataSource = lista.ToList();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,6 +41,9 @@ namespace IRF_Beadando_bmt3q9
 
         }
 
-
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+    
+        }
     }
 }
