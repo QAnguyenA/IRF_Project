@@ -18,7 +18,6 @@ namespace IRF_Beadando_bmt3q9
         public int Hawaii_Pizza { get; set; }
         public int Pepperonis_Pizza { get; set; }
         public int Tenger_Gyumolcsei_Pizza { get; set; }
-        public bool Házhozsszállítás { get; set; }
         public string Név { get; set; }
         public string Telfonszám { get; set; }
     }

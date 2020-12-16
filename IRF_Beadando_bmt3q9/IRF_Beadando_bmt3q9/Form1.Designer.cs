@@ -34,14 +34,6 @@ namespace IRF_Beadando_bmt3q9
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hawaii_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pepperonis_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tenger_Gyumolcsei_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Házhozsszállítás = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Név = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telfonszám = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -57,10 +49,17 @@ namespace IRF_Beadando_bmt3q9
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Hawaii_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pepperonis_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tenger_Gyumolcsei_Pizza = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Név = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telfonszám = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,68 +71,14 @@ namespace IRF_Beadando_bmt3q9
             this.Hawaii_Pizza,
             this.Pepperonis_Pizza,
             this.Tenger_Gyumolcsei_Pizza,
-            this.Házhozsszállítás,
             this.Név,
             this.Telfonszám});
             this.dataGridView1.DataSource = this.rendelesekBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 199);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 199);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Hawaii_Pizza
-            // 
-            this.Hawaii_Pizza.DataPropertyName = "Hawaii_Pizza";
-            this.Hawaii_Pizza.HeaderText = "Hawaii_Pizza";
-            this.Hawaii_Pizza.Name = "Hawaii_Pizza";
-            this.Hawaii_Pizza.ReadOnly = true;
-            // 
-            // Pepperonis_Pizza
-            // 
-            this.Pepperonis_Pizza.DataPropertyName = "Pepperonis_Pizza";
-            this.Pepperonis_Pizza.HeaderText = "Pepperonis_Pizza";
-            this.Pepperonis_Pizza.Name = "Pepperonis_Pizza";
-            this.Pepperonis_Pizza.ReadOnly = true;
-            // 
-            // Tenger_Gyumolcsei_Pizza
-            // 
-            this.Tenger_Gyumolcsei_Pizza.DataPropertyName = "Tenger_Gyumolcsei_Pizza";
-            this.Tenger_Gyumolcsei_Pizza.HeaderText = "Tenger_Gyumolcsei_Pizza";
-            this.Tenger_Gyumolcsei_Pizza.Name = "Tenger_Gyumolcsei_Pizza";
-            this.Tenger_Gyumolcsei_Pizza.ReadOnly = true;
-            // 
-            // Házhozsszállítás
-            // 
-            this.Házhozsszállítás.DataPropertyName = "Házhozsszállítás";
-            this.Házhozsszállítás.HeaderText = "Házhozsszállítás";
-            this.Házhozsszállítás.Name = "Házhozsszállítás";
-            this.Házhozsszállítás.ReadOnly = true;
-            // 
-            // Név
-            // 
-            this.Név.DataPropertyName = "Név";
-            this.Név.HeaderText = "Név";
-            this.Név.Name = "Név";
-            this.Név.ReadOnly = true;
-            // 
-            // Telfonszám
-            // 
-            this.Telfonszám.DataPropertyName = "Telfonszám";
-            this.Telfonszám.HeaderText = "Telfonszám";
-            this.Telfonszám.Name = "Telfonszám";
-            this.Telfonszám.ReadOnly = true;
-            // 
-            // rendelesekBindingSource
-            // 
-            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
             // 
             // chart1
             // 
@@ -141,13 +86,14 @@ namespace IRF_Beadando_bmt3q9
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(737, 239);
+            this.chart1.Location = new System.Drawing.Point(702, 205);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(226, 199);
+            this.chart1.Size = new System.Drawing.Size(261, 217);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
@@ -156,7 +102,7 @@ namespace IRF_Beadando_bmt3q9
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(13, 265);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(708, 103);
+            this.dataGridView2.Size = new System.Drawing.Size(656, 103);
             this.dataGridView2.TabIndex = 4;
             // 
             // textBox1
@@ -200,7 +146,7 @@ namespace IRF_Beadando_bmt3q9
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Kosárba";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -267,6 +213,52 @@ namespace IRF_Beadando_bmt3q9
             this.label7.TabIndex = 17;
             this.label7.Text = "Telefon";
             // 
+            // Hawaii_Pizza
+            // 
+            this.Hawaii_Pizza.DataPropertyName = "Hawaii_Pizza";
+            this.Hawaii_Pizza.HeaderText = "Hawaii_Pizza";
+            this.Hawaii_Pizza.Name = "Hawaii_Pizza";
+            this.Hawaii_Pizza.ReadOnly = true;
+            // 
+            // Pepperonis_Pizza
+            // 
+            this.Pepperonis_Pizza.DataPropertyName = "Pepperonis_Pizza";
+            this.Pepperonis_Pizza.HeaderText = "Pepperonis_Pizza";
+            this.Pepperonis_Pizza.Name = "Pepperonis_Pizza";
+            this.Pepperonis_Pizza.ReadOnly = true;
+            // 
+            // Tenger_Gyumolcsei_Pizza
+            // 
+            this.Tenger_Gyumolcsei_Pizza.DataPropertyName = "Tenger_Gyumolcsei_Pizza";
+            this.Tenger_Gyumolcsei_Pizza.HeaderText = "Tenger_Gyumolcsei_Pizza";
+            this.Tenger_Gyumolcsei_Pizza.Name = "Tenger_Gyumolcsei_Pizza";
+            this.Tenger_Gyumolcsei_Pizza.ReadOnly = true;
+            // 
+            // Név
+            // 
+            this.Név.DataPropertyName = "Név";
+            this.Név.HeaderText = "Név";
+            this.Név.Name = "Név";
+            this.Név.ReadOnly = true;
+            // 
+            // Telfonszám
+            // 
+            this.Telfonszám.DataPropertyName = "Telfonszám";
+            this.Telfonszám.HeaderText = "Telfonszám";
+            this.Telfonszám.Name = "Telfonszám";
+            this.Telfonszám.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rendelesekBindingSource
+            // 
+            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,9 +283,9 @@ namespace IRF_Beadando_bmt3q9
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,14 +294,7 @@ namespace IRF_Beadando_bmt3q9
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource rendelesekBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hawaii_Pizza;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pepperonis_Pizza;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tenger_Gyumolcsei_Pizza;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Házhozsszállítás;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Név;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telfonszám;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox textBox1;
@@ -325,6 +310,12 @@ namespace IRF_Beadando_bmt3q9
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hawaii_Pizza;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pepperonis_Pizza;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tenger_Gyumolcsei_Pizza;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Név;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telfonszám;
     }
 }
 

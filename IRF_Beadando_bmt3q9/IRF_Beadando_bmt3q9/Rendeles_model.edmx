@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Rendeles_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Rendeles_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Pizza_adatok">
           <Key>
             <PropertyRef Name="Id" />
@@ -31,7 +31,6 @@
           <Property Name="Hawaii Pizza" Type="int" Nullable="false" />
           <Property Name="Pepperonis Pizza" Type="int" Nullable="false" />
           <Property Name="Tenger Gyumolcsei Pizza" Type="int" Nullable="false" />
-          <Property Name="Házhozsszállítás" Type="bit" Nullable="false" />
           <Property Name="Név" Type="nvarchar" MaxLength="50" />
           <Property Name="Telfonszám" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -56,8 +55,7 @@
             <End Role="Pizza_adatok" EntitySet="Pizza_adatok" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Rendeles_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -81,18 +79,6 @@
           <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Pizza_adatok" Relationship="Self.FK_Pizza_adatok_To_Pizza_nev" FromRole="Pizza_nev" ToRole="Pizza_adatok" />
         </EntityType>
-        <EntityType Name="Rendelesek">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Hawaii_Pizza" Type="Int32" Nullable="false" />
-          <Property Name="Pepperonis_Pizza" Type="Int32" Nullable="false" />
-          <Property Name="Tenger_Gyumolcsei_Pizza" Type="Int32" Nullable="false" />
-          <Property Name="Házhozsszállítás" Type="Boolean" Nullable="false" />
-          <Property Name="Név" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Telfonszám" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <Association Name="FK_Pizza_adatok_To_Pizza_nev">
           <End Role="Pizza_nev" Type="Self.Pizza_nev" Multiplicity="1" />
           <End Role="Pizza_adatok" Type="Self.Pizza_adatok" Multiplicity="*" />
@@ -108,12 +94,23 @@
         <EntityContainer Name="Rendeles_DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Pizza_adatok" EntityType="Self.Pizza_adatok" />
           <EntitySet Name="Pizza_nev" EntityType="Self.Pizza_nev" />
-          <EntitySet Name="Rendeleseks" EntityType="Self.Rendelesek" />
           <AssociationSet Name="FK_Pizza_adatok_To_Pizza_nev" Association="Self.FK_Pizza_adatok_To_Pizza_nev">
             <End Role="Pizza_nev" EntitySet="Pizza_nev" />
             <End Role="Pizza_adatok" EntitySet="Pizza_adatok" />
           </AssociationSet>
+          <EntitySet Name="Rendeleseks" EntityType="Rendeles_DBModel.Rendelesek" />
         </EntityContainer>
+        <EntityType Name="Rendelesek">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Hawaii_Pizza" Type="Int32" Nullable="false" />
+          <Property Name="Pepperonis_Pizza" Type="Int32" Nullable="false" />
+          <Property Name="Tenger_Gyumolcsei_Pizza" Type="Int32" Nullable="false" />
+          <Property Name="Név" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telfonszám" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -143,13 +140,12 @@
           <EntitySetMapping Name="Rendeleseks">
             <EntityTypeMapping TypeName="Rendeles_DBModel.Rendelesek">
               <MappingFragment StoreEntitySet="Rendelesek">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Hawaii_Pizza" ColumnName="Hawaii Pizza" />
-                <ScalarProperty Name="Pepperonis_Pizza" ColumnName="Pepperonis Pizza" />
-                <ScalarProperty Name="Tenger_Gyumolcsei_Pizza" ColumnName="Tenger Gyumolcsei Pizza" />
-                <ScalarProperty Name="Házhozsszállítás" ColumnName="Házhozsszállítás" />
-                <ScalarProperty Name="Név" ColumnName="Név" />
                 <ScalarProperty Name="Telfonszám" ColumnName="Telfonszám" />
+                <ScalarProperty Name="Név" ColumnName="Név" />
+                <ScalarProperty Name="Tenger_Gyumolcsei_Pizza" ColumnName="Tenger Gyumolcsei Pizza" />
+                <ScalarProperty Name="Pepperonis_Pizza" ColumnName="Pepperonis Pizza" />
+                <ScalarProperty Name="Hawaii_Pizza" ColumnName="Hawaii Pizza" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -25,11 +25,10 @@ namespace IRF_Beadando_bmt3q9
             rendelesekBindingSource.DataSource = context.Rendeleseks.Local;
             dataGridView2.DataSource = _controller.RendManager.Sajats;
            
-            Diagram();
+            
            
 
-           
-
+          
 
         }
 
@@ -37,8 +36,13 @@ namespace IRF_Beadando_bmt3q9
 
         private void Diagram()
         {
-            
-      
+           
+            chart1.Series["Series1"].Points.AddXY(label3.Text, textBox1.Text);
+            chart1.Series["Series1"].Points.AddXY(label4.Text, textBox2.Text);
+            chart1.Series["Series1"].Points.AddXY(label5.Text, textBox3.Text);
+
+            chart1.Series[0]["PieLabelStyle"] = "Disabled";
+
         }
 
    
@@ -59,6 +63,7 @@ namespace IRF_Beadando_bmt3q9
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 _controller.Register(
@@ -74,6 +79,8 @@ namespace IRF_Beadando_bmt3q9
 
                 MessageBox.Show(ex.Message);
             }
+            
+            Diagram();
         }
 
      
