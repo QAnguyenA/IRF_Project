@@ -32,8 +32,6 @@ namespace IRF_Beadando_bmt3q9
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rendelesekBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rendelesDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rendeles_DBDataSet = new IRF_Beadando_bmt3q9.Rendeles_DBDataSet();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hawaiiPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pepperonisPizzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +41,6 @@ namespace IRF_Beadando_bmt3q9
             this.telfonszámDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendeles_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -68,18 +64,7 @@ namespace IRF_Beadando_bmt3q9
             // 
             // rendelesekBindingSource
             // 
-            this.rendelesekBindingSource.DataMember = "Rendelesek";
-            this.rendelesekBindingSource.DataSource = this.rendelesDBDataSetBindingSource;
-            // 
-            // rendelesDBDataSetBindingSource
-            // 
-            this.rendelesDBDataSetBindingSource.DataSource = this.rendeles_DBDataSet;
-            this.rendelesDBDataSetBindingSource.Position = 0;
-            // 
-            // rendeles_DBDataSet
-            // 
-            this.rendeles_DBDataSet.DataSetName = "Rendeles_DBDataSet";
-            this.rendeles_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.rendelesekBindingSource.DataSource = typeof(IRF_Beadando_bmt3q9.Rendelesek);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -90,22 +75,22 @@ namespace IRF_Beadando_bmt3q9
             // 
             // hawaiiPizzaDataGridViewTextBoxColumn
             // 
-            this.hawaiiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Hawaii Pizza";
-            this.hawaiiPizzaDataGridViewTextBoxColumn.HeaderText = "Hawaii Pizza";
+            this.hawaiiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Hawaii_Pizza";
+            this.hawaiiPizzaDataGridViewTextBoxColumn.HeaderText = "Hawaii_Pizza";
             this.hawaiiPizzaDataGridViewTextBoxColumn.Name = "hawaiiPizzaDataGridViewTextBoxColumn";
             this.hawaiiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pepperonisPizzaDataGridViewTextBoxColumn
             // 
-            this.pepperonisPizzaDataGridViewTextBoxColumn.DataPropertyName = "Pepperonis Pizza";
-            this.pepperonisPizzaDataGridViewTextBoxColumn.HeaderText = "Pepperonis Pizza";
+            this.pepperonisPizzaDataGridViewTextBoxColumn.DataPropertyName = "Pepperonis_Pizza";
+            this.pepperonisPizzaDataGridViewTextBoxColumn.HeaderText = "Pepperonis_Pizza";
             this.pepperonisPizzaDataGridViewTextBoxColumn.Name = "pepperonisPizzaDataGridViewTextBoxColumn";
             this.pepperonisPizzaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tengerGyumolcseiPizzaDataGridViewTextBoxColumn
             // 
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Tenger Gyumolcsei Pizza";
-            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.HeaderText = "Tenger Gyumolcsei Pizza";
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.DataPropertyName = "Tenger_Gyumolcsei_Pizza";
+            this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.HeaderText = "Tenger_Gyumolcsei_Pizza";
             this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.Name = "tengerGyumolcseiPizzaDataGridViewTextBoxColumn";
             this.tengerGyumolcseiPizzaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -140,8 +125,6 @@ namespace IRF_Beadando_bmt3q9
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rendelesekBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendelesDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rendeles_DBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,9 +132,6 @@ namespace IRF_Beadando_bmt3q9
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource rendelesDBDataSetBindingSource;
-        private Rendeles_DBDataSet rendeles_DBDataSet;
-        private System.Windows.Forms.BindingSource rendelesekBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hawaiiPizzaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pepperonisPizzaDataGridViewTextBoxColumn;
@@ -159,6 +139,7 @@ namespace IRF_Beadando_bmt3q9
         private System.Windows.Forms.DataGridViewCheckBoxColumn házhozsszállításDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn névDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telfonszámDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource rendelesekBindingSource;
     }
 }
 

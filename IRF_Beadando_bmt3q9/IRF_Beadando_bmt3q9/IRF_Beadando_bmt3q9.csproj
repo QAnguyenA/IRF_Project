@@ -87,14 +87,6 @@
     <Compile Include="Rendelesek.cs">
       <DependentUpon>Rendeles_model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Rendeles_DBDataSet.cs">
-      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Rendeles_DBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Rendeles_model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Pizza_adatok.datasource" />
+    <None Include="Properties\DataSources\Pizza_nev.datasource" />
+    <None Include="Properties\DataSources\Rendelesek.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,17 +131,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Rendeles_model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Rendeles_DBDataSet.xsc">
-      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Rendeles_DBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Rendeles_DBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Rendeles_DBDataSet.xss">
-      <DependentUpon>Rendeles_DBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Rendeles_model.edmx.diagram">
       <DependentUpon>Rendeles_model.edmx</DependentUpon>
     </None>
@@ -157,10 +141,10 @@
   <ItemGroup>
     <Content Include="README.txt" />
     <Content Include="Rendeles_DB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Rendeles_DB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Rendeles_DB.mdf</DependentUpon>
     </Content>
     <Content Include="Rendeles_model.Context.tt">
